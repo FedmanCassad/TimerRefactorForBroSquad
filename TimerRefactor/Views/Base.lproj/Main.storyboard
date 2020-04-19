@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerRefactor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сколько зарабатываешь, еба?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZF-3v-kJe">
+                                <rect key="frame" x="86" y="96" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-wg-Fwu">
+                                <rect key="frame" x="86" y="159" width="242" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="O7R-J4-nob"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А зарплата какого числа?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Id-ux-2Vq">
+                                <rect key="frame" x="103.5" y="292" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-po-qqH">
+                                <rect key="frame" x="86" y="349" width="242" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="lqb-Fb-dPf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8t-wh-rjw">
+                                <rect key="frame" x="139" y="468" width="133" height="61"/>
+                                <state key="normal" title="Накопить!"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ffa-ee-Cww"/>
+                                    <segue destination="M5c-sb-qHK" kind="show" identifier="toTimerVC" id="yE0-ar-KAo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="C8t-wh-rjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="7nS-Wv-ApK"/>
+                            <constraint firstItem="C8t-wh-rjw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="45.5" id="9WB-dv-M2I"/>
+                            <constraint firstItem="1Id-ux-2Vq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BgJ-VK-aqV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C8t-wh-rjw" secondAttribute="bottom" constant="333" id="KzQ-Id-sZU"/>
+                            <constraint firstItem="rY0-wg-Fwu" firstAttribute="top" secondItem="zZF-3v-kJe" secondAttribute="bottom" constant="42" id="QfM-R1-dvP"/>
+                            <constraint firstItem="zZF-3v-kJe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="Uyb-OE-vsV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C8t-wh-rjw" secondAttribute="trailing" constant="142" id="VWi-iz-F1A"/>
+                            <constraint firstItem="zZF-3v-kJe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOr-mR-gfC"/>
+                            <constraint firstItem="UTI-po-qqH" firstAttribute="top" secondItem="1Id-ux-2Vq" secondAttribute="bottom" constant="36" id="Z0A-Jg-K5z"/>
+                            <constraint firstItem="1Id-ux-2Vq" firstAttribute="top" secondItem="rY0-wg-Fwu" secondAttribute="bottom" constant="99" id="bw2-bV-kVs"/>
+                            <constraint firstItem="UTI-po-qqH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kvz-ib-5PO"/>
+                            <constraint firstItem="C8t-wh-rjw" firstAttribute="top" secondItem="UTI-po-qqH" secondAttribute="bottom" constant="85" id="n5o-p6-ueP"/>
+                            <constraint firstItem="rY0-wg-Fwu" firstAttribute="centerX" secondItem="zZF-3v-kJe" secondAttribute="centerX" id="tVy-Q1-4Cb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayOfSalaryTextField" destination="UTI-po-qqH" id="pN8-0a-iyW"/>
+                        <outlet property="salaryAmountTextField" destination="rY0-wg-Fwu" id="kyr-6j-Z2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="UOp-tO-VZC">
+            <objects>
+                <viewController id="M5c-sb-qHK" customClass="TimerViewController" customModule="TimerRefactor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2t-JV-6HV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Заработано с последней зарплаты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ig-CX-qK3">
+                                <rect key="frame" x="67" y="123" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjB-ik-wvT">
+                                <rect key="frame" x="67" y="195" width="280" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98431372549999996" green="0.35686274509999999" blue="0.055155149649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Заработано с текущего момента" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfA-UD-eLI">
+                                <rect key="frame" x="67" y="301" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNF-w5-hb6">
+                                <rect key="frame" x="67" y="389" width="280" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98431372549999996" green="0.35686274509999999" blue="0.055155149649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Avu-Du-6b7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WhX-ex-HJM"/>
+                    <connections>
+                        <outlet property="gatheredSinceLastPayLabel" destination="WjB-ik-wvT" id="qia-Rt-9ap"/>
+                        <outlet property="gatheredSinceNowLabel" destination="QNF-w5-hb6" id="nBx-hQ-FY5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAs-eJ-lzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+</document>
